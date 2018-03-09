@@ -1,5 +1,5 @@
-hash: 106e9b97f84648f38c38f5e2dadba5102f10c5a7f08f9a5a31c5c932267569b9
-updated: 2017-08-14T12:33:18.268024701+10:00
+hash: 11b8194b4756f6ab6a9c140fd563d97a3408e01d172caa8fb1826dc93c0df32e
+updated: 2018-03-09T16:45:32.307047+11:00
 imports:
 - name: github.com/asaskevich/govalidator
   version: 4918b99a7cb949bb295f3c7bbaf24b577d806e35
@@ -133,9 +133,11 @@ imports:
 - name: github.com/ory/herodot
   version: 5bb399b8a5aa583343a2108e723b990432b4a1b4
 - name: github.com/ory/hydra-oracle-plugin
-  version: 9e8b8804c6b098da0bb9a6d53936a15b1edd148c
+  version: f88f42eb53fb38bcd3b3e11c41849c30ff62854c
   repo: https://github.com/cperfect/hydra-oracle-plugin.git
   vcs: git
+  subpackages:
+  - plugin
 - name: github.com/ory/ladon
   version: 80ec7e047ca2806a4491df41d5e9a2ad73b936a0
   subpackages:
@@ -162,12 +164,12 @@ imports:
   version: bdb0aeca8a993b292b85c9ec17b5ce0ff81848c8
 - name: github.com/segmentio/backo-go
   version: 204274ad699c0983a70203a566887f17a717fef4
+- name: github.com/sirupsen/logrus
+  version: d682213848ed68c0a260ca37d6dd5ace8423f5ba
 - name: github.com/Sirupsen/logrus
-  version: 181d419aa9e2223811b824e8f0b4af96f9ba9302
+  version: 768a92a02685ee7535069fc1581341b41bab9b72
   repo: https://github.com/sirupsen/logrus.git
   vcs: git
-- name: github.com/sirupsen/logrus
-  version: 181d419aa9e2223811b824e8f0b4af96f9ba9302
 - name: github.com/spf13/afero
   version: 9be650865eab0c12963d8753212f4f9c66cdcf12
   subpackages:
@@ -240,9 +242,12 @@ imports:
 - name: gopkg.in/gorp.v1
   version: c87af80f3cc5036b55b83d77171e156791085e2e
 - name: gopkg.in/rana/ora.v4
-  version: 1deeb382cf211a47c5e8f2ba5b2cd67c5b8b5660
-- name: gopkg.in/square/go-jose.v1
-  version: aa2e30fdd1fe9dd3394119af66451ae790d50e0d
+  version: 7a9ff49e7315c80623bc2b49c64fba1900e07209
+  subpackages:
+  - date
+  - num
+- name: gopkg.in/square/go-jose.v2
+  version: f8f38de21b4dcd69d0413faf231983f5fd6634b1
   subpackages:
   - cipher
   - json
