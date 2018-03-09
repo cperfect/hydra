@@ -1,7 +1,7 @@
 package: github.com/ory/hydra
 import:
 - package: github.com/ory/hydra-oracle-plugin
-  version: vendored-oracle-plugin
+  version: driver-upgrade_4_1_15
   repo: https://github.com/cperfect/hydra-oracle-plugin.git
   vcs: git
 - package: github.com/sirupsen/logrus
