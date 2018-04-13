@@ -20,7 +20,7 @@ import (
 	_ "github.com/go-goracle/goracle"
 )
 
-var loggger = logrus.New()
+var logger = logrus.New()
 
 func Connect(u string) (*sqlx.DB, error) {
 	loggger.Formatter = new(logrus.JSONFormatter)
