@@ -1,0 +1,41 @@
+package: github.com/ory/hydra-oracle-plugin
+import:
+# - package: github.com/sirupsen/logrus
+#   version: master
+# - package: github.com/Sirupsen/logrus
+#   version: master
+#   repo: https://github.com/sirupsen/logrus.git
+#   vcs: git
+- package: github.com/sirupsen/logrus
+  version: master
+- package: github.com/jmoiron/sqlx
+- package: github.com/ory/fosite
+  version: v0.9.5
+- package: github.com/ory/hydra
+  version: vendored-oracle-plugin
+  repo: https://github.com/cperfect/hydra.git
+  vcs: git
+  subpackages:
+  - client
+  - jwk
+  - pkg
+  - warden/group
+  - config
+- package: github.com/ory/ladon
+  version: v0.8.1
+  subpackages:
+  - compiler
+- package: github.com/pborman/uuid
+  version: v1.0
+- package: github.com/pkg/errors
+  version: v0.8.0
+- package: github.com/spf13/cobra
+- package: github.com/spf13/viper
+- package: github.com/square/go-jose
+  version: ~1.1.0
+# - package: gopkg.in/rana/ora.v4
+#   version: v4.1.15
+- package: github.com/go-goracle/goracle
+  version: v2.1.22
+testImport:
+- package: github.com/lib/pq

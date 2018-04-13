@@ -258,13 +258,16 @@ func (h *Handler) IntrospectHandler(w http.ResponseWriter, r *http.Request, _ ht
 func (h *Handler) TokenHandler(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	var session = NewSession("")
 	var ctx = fosite.NewContext()
+	h.L.Debugf("TokenHandler request %#v", r)
 
 	accessRequest, err := h.OAuth2.NewAccessRequest(ctx, r, session)
 	if err != nil {
+		h.L.Errorf("FAILED to get ACCESS REQUEST %#v", err)
 		pkg.LogError(err, h.L)
 		h.OAuth2.WriteAccessError(w, accessRequest, err)
 		return
 	}
+	h.L.Debugf("TokenHandler accessRequest %#v", accessRequest)
 
 	if accessRequest.GetGrantTypes().Exact("client_credentials") {
 		session.Subject = accessRequest.GetClient().GetID()
