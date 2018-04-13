@@ -23,14 +23,14 @@ import (
 var logger = logrus.New()
 
 func Connect(u string) (*sqlx.DB, error) {
-	loggger.Formatter = new(logrus.JSONFormatter)
+	logger.Formatter = new(logrus.JSONFormatter)
 	logger.Level, _ = logrus.ParseLevel("DEBUG")
 	host, database := GetDatabase(u)
 	db, err := sqlx.Open("ora", host)
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}
-	sql.Register("ora", instrumentedsql.WrapDriver(db.Driver(), instrumentedsql.WithLogger(loggger)))
+	sql.Register("ora", instrumentedsql.WrapDriver(db.Driver(), instrumentedsql.WithLogger(logger)))
 	db, err = sqlx.Open("ora", host)
 	if err != nil {
 		return nil, errors.WithStack(err)
