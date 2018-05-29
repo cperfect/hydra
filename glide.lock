@@ -1,5 +1,5 @@
-hash: 984ac6811441319a27f1536c0bbda4399f0b2d40299db7cbddf72d87290e1d3e
-updated: 2018-05-28T12:43:53.979968+10:00
+hash: f953d70f04109371483d23211ac632f93c248238d1d0d7b8b72f3e923ffc3a8e
+updated: 2018-05-29T10:21:12.830513+10:00
 imports:
 - name: github.com/asaskevich/govalidator
   version: 4918b99a7cb949bb295f3c7bbaf24b577d806e35
@@ -135,7 +135,7 @@ imports:
 - name: github.com/ory/herodot
   version: 5bb399b8a5aa583343a2108e723b990432b4a1b4
 - name: github.com/ory/hydra-oracle-plugin
-  version: 8427f31c941869ea92ba3464fd087e060904949d
+  version: 4a00c8ea753d8679a0f11e900c4c3e2b0091ff0a
   repo: https://github.com/cperfect/hydra-oracle-plugin.git
   vcs: git
   subpackages:
